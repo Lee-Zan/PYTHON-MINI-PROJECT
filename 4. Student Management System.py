@@ -23,10 +23,12 @@ class StudentManager:
     def __init__(self):
         self.students = []
 
+    # This function adds record of new student
     def add_student(self, student):
         self.students.append(student)
         print(student.name,"added successfully.\n")
 
+    # This function removes record of student from the system
     def remove_student(self, id):
         for i in self.students:
             if i.id == id:
@@ -35,12 +37,23 @@ class StudentManager:
                 return
         print("Student not found in record.\n")
 
+
+    # This function displays the available records of the student from the system
     def list_student(self):
         if not self.students:
             print("No students available.\n")
         else:
             for i in self.students:
                 i.display_info()
+
+    # This function is used to search student by their name
+    def search_student(self, name):
+        for i in self.students:
+            if i.name.lower() == name.lower():
+                print("Student found:\n")
+                i.display_info()
+                return
+        print("No student found with name:", name, "\n")
 
 
 S1 = Student(101, "Lizan Niraula", "Bhaktapur", 22, 12, ["C", "Java", "Math", "Python", "Chemistry", "Biology"])
@@ -55,4 +68,6 @@ manager.add_student(S3)
 manager.list_student()
 
 manager.remove_student(101)
+
+manager.search_student("Hari Bahadur")
 manager.list_student()
