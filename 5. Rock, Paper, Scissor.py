@@ -28,4 +28,4 @@ while True:
     elif user_choice == "scissors" and computer_choice == "paper":
         print("You win!\n")
     else:
-        print("You lose!\n")
+        print("You lose!\n") 
