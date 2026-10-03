@@ -21,11 +21,11 @@ p2 = Product("Rice", 2500, 15)
 p3 = Product("Banana", 100, 5)
 p4 = Product("Biscuits", 10, 50)
 p5 = Product("Noodles", 25, 7)
+p6 = Product("Coke", 30, 270)
 
 inventory = Inventory()
 inventory.add_product(p1)
 inventory.add_product(p2)
 inventory.add_product(p3)
 inventory.add_product(p4)
-inventory.add_product(p5)
-
+inventory.add_product(p5) 
