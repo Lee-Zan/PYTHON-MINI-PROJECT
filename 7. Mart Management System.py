@@ -4,6 +4,7 @@ class Product:
         self.quantity = quantity
         self.price = price
 
+
     def update_stock(self, amount):
         self.quantity += amount
         print("Stock updated: " + self.name + " now has " + str(self.quantity) + " units.")
@@ -12,6 +13,7 @@ class Product:
     def update_price(self, new_price):
         self.price = new_price
         print("Price updated: " + self.name + " now costs " + str(self.price) + " per unit.")
+
 
     def show_info(self):
         print("Product: " + self.name + ", Quantity: " + str(self.quantity) + ", Price: " + str(self.price))
@@ -34,6 +36,7 @@ class Inventory:
             print(product.name + " is available with " + str(product.quantity) + " units.")
         else:
             print(product_name + " is not found in inventory.")
+
 
     def show_all_products(self):
         if not self.products:
